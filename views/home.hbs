@@ -1,6 +1,13 @@
-<p>lista</p>
-{{!-- <h1>{{users.name}}</h1> --}}
-{{#each users}}
-    <h1>{{name}}</h1>
-{{/each}}
-{{!-- <h2>{{username}}</h2> --}}
+<div class="container">
+    <p>Lista osób</p>
+
+    {{#each users}}
+    <div class="card mb-3">
+        <h3>{{this.username}} {{this.name}}</h1>
+        <h4>{{this.email}}</h3>
+        <p>{{this.address.street}} {{this.address.suite}}</p>
+        <p>{{this.address.zipcode}} {{this.address.city}}</p>
+        <a href="{{this.website}}">{{this.website}}</a>
+    </div>
+    {{/each}}
+</div>
